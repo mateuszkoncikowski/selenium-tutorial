@@ -82,6 +82,7 @@ public class CategoryTest {
                 .navigateToCategoryPage(category);
 
         String expectedMessage = String.format("Topics in ′%s′ category", category.getName());
+        System.out.println(categoryPage.getPageSource());
         assertThat(categoryPage.getPageSource().contains(expectedMessage), equalTo(true));
     }
 
