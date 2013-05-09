@@ -1,0 +1,6 @@
+.idea
+*.pyc
+chromedriver.log
+selenium.log
+target
+*.swp

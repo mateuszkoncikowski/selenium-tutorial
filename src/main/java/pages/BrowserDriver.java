@@ -3,7 +3,7 @@ package pages;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -28,7 +28,7 @@ public class BrowserDriver {
         log.info("===========================");
         log.info("Launching browser");
         log.info("===========================");
-        driver = new ChromeDriver();
+        driver = new HtmlUnitDriver();
     }
 
     public void closeBrowser() {

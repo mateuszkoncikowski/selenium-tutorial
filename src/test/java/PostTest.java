@@ -53,7 +53,7 @@ public class PostTest {
                 .navigateToTopicPage(topic)
                 .addPost(post);
 
-        String expectedMessage = "Your reply has been saved, check out the topic.";
+        String expectedMessage = "Your reply has been saved, check out the topic";
         assertThat(postCreatePostPage.getPageSourceWithoutTags(), containsString(expectedMessage));
     }
 
@@ -157,7 +157,7 @@ public class PostTest {
                 .navigateToTopicPage(topic)
                 .addPost(post);
 
-        String expectedMessage = "Your reply has been saved, check out the topic.";
+        String expectedMessage = "Your reply has been saved, check out the topic";
         assertThat(postCreatePostPage.getPageSourceWithoutTags(), containsString(expectedMessage));
     }
 

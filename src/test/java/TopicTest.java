@@ -42,7 +42,7 @@ public class TopicTest {
                 .navigateToCreateTopicPage()
                 .addTopic(topic);
 
-        String expectedMessage = "You have successfully created your new topic.";
+        String expectedMessage = "You have successfully created your new topic";
         assertThat(postCreateTopicPage.getPageSourceWithoutTags(), containsString(expectedMessage));
     }
 
