@@ -8,7 +8,6 @@
     <artifactId>selenium</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <dependencies>
         <dependency>
             <!-- selenium for the win -->
