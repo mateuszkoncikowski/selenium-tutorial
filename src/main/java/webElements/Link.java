@@ -23,4 +23,8 @@ public class Link<DestinationClass> extends CommonWebElement {
         getWebElement().click();
         return PageFactory.initElements(getDriver(), destinationClass);
     }
+
+    public String getLinkText() {
+        return getWebElement().getText();
+    }
 }

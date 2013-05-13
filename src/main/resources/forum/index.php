@@ -44,7 +44,7 @@ else
 				echo '<td class="leftpart">';
 					echo '<h3><a href="category.php?id=' . $row['cat_id'] . '">' . $row['cat_name'] . '</a></h3><span>' . $row['cat_description'] .'<span>';
 				echo '</td>';
-				echo '<td class="rightpart">';
+				echo '<td class="rightpart" id="' . $row['cat_name'] .'">';
 				
 				//fetch last topic for each cat
 					$topicsql = "SELECT

@@ -1,7 +1,9 @@
 import builders.CategoryBuilder;
+import builders.TopicBuilder;
 import builders.UserBuilder;
 import enums.Level;
 import objects.Category;
+import objects.Topic;
 import objects.User;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,7 +13,8 @@ import pages.*;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 
 /**
@@ -83,6 +86,17 @@ public class CategoryTest {
 
         String expectedMessage = String.format("Topics in ′%s′ category", category.getName());
         assertThat(categoryPage.getPageSource(), containsString(expectedMessage));
+    }
+
+    @Test
+    public void categoryListOnIndexPageShouldDisplayLinkToLastTopic() {
+        User user = new UserBuilder().build();
+        Category category = new CategoryBuilder().build();
+        Topic topic = new TopicBuilder(category, user).build();
+
+        Index index = forumPage.navigateToIndex();
+
+        assertThat(index.getLinkToLastTopic(category), equalTo(topic.getSubject()));
     }
 
     @AfterClass
