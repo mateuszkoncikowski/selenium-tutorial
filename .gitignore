@@ -4,3 +4,4 @@ chromedriver.log
 selenium.log
 target
 *.swp
+.DS_Store
