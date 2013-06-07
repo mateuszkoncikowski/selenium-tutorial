@@ -5,3 +5,4 @@ selenium.log
 target
 *.swp
 .DS_Store
+*.iml
