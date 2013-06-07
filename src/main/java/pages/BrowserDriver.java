@@ -19,6 +19,7 @@ public class BrowserDriver {
     private static final String FORUM_URL = "http://127.0.0.1/forum/";
     private WebDriver driver;
 
+
     public BrowserDriver() {
     }
 
