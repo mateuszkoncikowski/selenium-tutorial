@@ -20,7 +20,6 @@ public class BrowserDriver {
     private WebDriver driver;
 
 
-
     public BrowserDriver() {
     }
 
