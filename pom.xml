@@ -10,10 +10,9 @@
 
     <dependencies>
         <dependency>
-            <!-- selenium for the win -->
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
-            <version>2.31.0</version>
+            <artifactId>selenium-java</artifactId>
+            <version>2.39.0</version>
         </dependency>
         <dependency>
             <!-- testNG instead of jUnit -->
@@ -45,44 +44,5 @@
             <artifactId>jsoup</artifactId>
             <version>1.7.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>3.2</version>
-        </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <!-- build will fail if error found on pmd -->
-                            <goal>check</goal>
-                            <goal>cpd-check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <linkXRef>false</linkXRef>
-                    <failOnViolation>false</failOnViolation>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>2.5.3-SNAPSHOT</version>
-            </plugin>
-        </plugins>
-    </reporting>
-
 </project>
